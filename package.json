@@ -1,0 +1,12 @@
+{
+  "name": "trivia-waffle-socket",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Anuoluwa/trivia-waffle-socket.git",
+  "author": "Anu <anuoluwa.apiti@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2"
+  }
+}
