@@ -28,6 +28,34 @@ const addPlayer = ({ id, playerName, room }) => {
   return { newPlayer };
 };
 
+// Get a player by id
+const getPlayer = (id) => {
+  const player = players.find((player) => player.id === id);
+
+  if (!player) {
+    return {
+      error: new Error("Player not found!"),
+    };
+  }
+
+  return { player };
+};
+
+// Get all players in the room
+const getAllPlayers = (room) => {
+  return players.filter((player) => player.room === room);
+};
+
+// Remove a player by id
+const removePlayer = (id) => {
+  return players.find((player, index) => {
+    if (player.id === id) {
+      return players.splice(index, 1)[0];
+    }
+    return false;
+  });
+};
+
 // Export our helper methods
 module.exports = {
   addPlayer,
